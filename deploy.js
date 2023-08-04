@@ -3,8 +3,8 @@ const Web3 = require('web3');
 const { interface, bytecode } = require('./compile.js');
 
 const provider = new HDWalletProvider(
-  '-- private key --',
-  '-- infura api key for test network --'
+  'upset inmate snake small deal begin champion purity flight notice token barrel',
+  'https://linea-goerli.infura.io/v3/7c919b5145584f0d9b7151458cb9dde5'
 );
 
 const web3 = new Web3(provider);
@@ -15,9 +15,9 @@ const deploy = async () => {
   const result = await new web3.eth.Contract(JSON.parse(interface))
     .deploy({
       data: bytecode,
-      arguments: ['Hi , Pulkit !'],
     })
-    .send({ gas: '10000000', from: accgitounts[0] });
+    .send({ gas: '1000000', from: accounts[0] });
+  console.log(interface);
   console.log(result);
   console.log('Contract Deployed  to  account', result.options.address);
 };
