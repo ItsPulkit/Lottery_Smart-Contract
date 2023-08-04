@@ -3,8 +3,7 @@ const Web3 = require('web3');
 const { interface, bytecode } = require('./compile.js');
 
 const provider = new HDWalletProvider(
-  'upset inmate snake small deal begin champion purity flight notice token barrel',
-  'https://linea-goerli.infura.io/v3/7c919b5145584f0d9b7151458cb9dde5'
+'PRIVATE-KEY','INFURA-API-KEY'
 );
 
 const web3 = new Web3(provider);
